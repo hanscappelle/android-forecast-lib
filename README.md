@@ -1,16 +1,20 @@
 android-forecast-lib
 ====================
 
-A basic Android library for simple forecast.io weather API calls
+A basic Android library for simple forecast.io weather API calls.
 
-# Usage example
+## How it works (briefly)
+
+Create an URL with the ForecastCallBuilder providing your API Key, latitude and longitude. Performs the HTTP GET in the background and returns the JSON result parsed with GSON using a ResponseListener. 
+
+## Usage example
 
 Clone Android eclipse (ADT) project into workspace and add this as a library to your project.
 
 Execute a call like this:
 
-    		double latitude = 37.8267;
-    		double longitude = -122.423;
+		double latitude = 37.8267;
+		double longitude = -122.423;
     
 		ForecastCallBuilder builder = ForecastCallBuilder.getInstance();
 		builder.key("YOUR_API_KEY_HERE").latitude(latitude)
@@ -43,6 +47,8 @@ Execute a call like this:
 		builder.performCall(listener);
 
 
-# Resources
+## Resources
 
 For all forecast specific details visit [the forecast developer docs](https://developer.forecast.io/docs/v2).
+
+Gson library info available at [the Google GSON project page](https://code.google.com/p/google-gson/).
