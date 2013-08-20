@@ -7,6 +7,8 @@ A basic Android library for simple forecast.io weather API calls.
 
 Create an URL with the ForecastCallBuilder providing your API Key, latitude and longitude. Performs the HTTP GET in the background and returns the JSON result parsed with GSON using a ResponseListener. 
 
+Note that the timestamps given by the API are seconds since 1970, so when using within Java multiply by 1000 first since Java expects milliseconds since 1970.
+
 ## Usage example
 
 Clone Android eclipse (ADT) project into workspace and add this as a library to your project.
