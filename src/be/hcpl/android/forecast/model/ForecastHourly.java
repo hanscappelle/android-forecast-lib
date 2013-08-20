@@ -4,7 +4,7 @@ public class ForecastHourly {
 
 	private String summary;
 	private String icon;
-	private WeatherData[] data;
+	private HourlyWeatherData[] data;
 
 	public String getSummary() {
 		return summary;
@@ -22,11 +22,11 @@ public class ForecastHourly {
 		this.icon = icon;
 	}
 
-	public WeatherData[] getData() {
+	public HourlyWeatherData[] getData() {
 		return data;
 	}
 
-	public void setData(WeatherData[] data) {
+	public void setData(HourlyWeatherData[] data) {
 		this.data = data;
 	}
 

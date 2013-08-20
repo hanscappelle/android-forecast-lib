@@ -4,7 +4,7 @@ public class ForecastDaily {
 
 	private String summary;
 	private String icon;
-	private WeatherData[] data;
+	private DailyWeatherData[] data;
 
 	public String getSummary() {
 		return summary;
@@ -22,11 +22,11 @@ public class ForecastDaily {
 		this.icon = icon;
 	}
 
-	public WeatherData[] getData() {
+	public DailyWeatherData[] getData() {
 		return data;
 	}
 
-	public void setData(WeatherData[] data) {
+	public void setData(DailyWeatherData[] data) {
 		this.data = data;
 	}
 
