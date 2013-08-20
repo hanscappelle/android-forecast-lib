@@ -9,8 +9,8 @@ Clone Android eclipse (ADT) project into workspace and add this as a library to 
 
 Execute a call like this:
 
-    double latitude = 37.8267;
-    double longitude = -122.423;
+    		double latitude = 37.8267;
+    		double longitude = -122.423;
     
 		ForecastCallBuilder builder = ForecastCallBuilder.getInstance();
 		builder.key("YOUR_API_KEY_HERE").latitude(latitude)
@@ -19,10 +19,14 @@ Execute a call like this:
 
 			@Override
 			public void handleResponse(HttpServiceOutput result) {
-			  // TODO you should check the result for errors and/or at least check for nullpointers
-				Toast.makeText(getApplicationContext(), "Summary: " + result.getForecastResponse().getCurrently()
+			  	if( result == null || result.getException() != null ){
+			  		Toast.makeText(getApplicationContext(), "Failed to fetch data!", Toast.LENGTH_SHORT).show();
+			  	}
+			  	else {
+			  		// you should also check for nullpointers on the forecast data before display
+					Toast.makeText(getApplicationContext(), "Summary: " + result.getForecastResponse().getCurrently()
 								.getSummary(), Toast.LENGTH_LONG).show();
-
+				}
 			}
 
 			@Override
